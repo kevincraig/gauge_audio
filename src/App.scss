@@ -1,0 +1,44 @@
+body, html {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  height: 2px;
+  caret-color: aqua;
+
+}
+
+
+.action-icon {
+  color: white;
+  font-size: 3rem;
+  display: inline-block;
+  outline: none;
+  align-self: center;
+  justify-self: center;
+}
+
+.album-art {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.album-info {
+  text-align: center;
+}
+
+.audio-provider-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 15px;
+}
+
+
