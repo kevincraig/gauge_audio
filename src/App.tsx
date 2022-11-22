@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  Player,
+  PlayerControls,
   AlbumArt,
   AlbumInfo,
   SeekBar,
@@ -8,6 +8,7 @@ import {
 } from "./components/player";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Container } from "react-bootstrap";
+import { Clock } from "./components/common";
 import "./App.scss";
 
 function App() {
@@ -22,21 +23,28 @@ function App() {
 
   return (
     <Container>
-      <Row className="min-vh-100">
-        <Col className="align-self-center">
-          <AlbumArt imageUrl="https://picsum.photos/350" />
+      <Row className="vh-100">
+        <Row className="clock">
+          <Clock />
+        </Row>
+        <Col className={"col-sm-4 align-self-center"}>
+          <AlbumArt imageUrl="https://picsum.photos/225" />
         </Col>
-        <Col className="align-self-center">
-          <AudioProvider provider={"Tidal"} />
+        <Col className={"align-self-center"}>
+          <AudioProvider provider={"tidal"} />
           <AlbumInfo
+            className={"album-info"}
             albumName="Album Name"
             artistName="Artist Name"
             trackName="Track Name"
           />
-          <Player />
         </Col>
-
-        <SeekBar currentTime={40} duration={234} />
+        <Col className={"end-columns col-sm-1 align-self-center"}>
+          <PlayerControls />
+        </Col>
+        <Row className="seeker ">
+          <SeekBar currentTime={80} duration={234} />
+        </Row>
       </Row>
     </Container>
   );

@@ -5,11 +5,17 @@ type AlbumInfoProps = {
   albumName: string;
   artistName: string;
   trackName: string;
+  className?: string;
 };
 
-const AlbumInfo = ({ albumName, artistName, trackName }: AlbumInfoProps) => {
+const AlbumInfo = ({
+  className,
+  albumName,
+  artistName,
+  trackName,
+}: AlbumInfoProps) => {
   return (
-    <Row>
+    <Row className={className}>
       <Col>
         <div className="album-info">
           <h1>{trackName}</h1>

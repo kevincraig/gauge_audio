@@ -1,23 +1,31 @@
 body, html {
-  background-color: black;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(40, 40, 40, 1) 100%);
   color: white;
-  height: 100%;
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 0;
+  margin: 0 0;
+  width: available;
+
 }
+
 
 input[type='range'] {
   -webkit-appearance: none;
-  height: 2px;
-  caret-color: aqua;
-
+  height: 5px;
 }
 
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0;
+  width: 0;
+  background: aqua;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 .action-icon {
   color: white;
-  font-size: 3rem;
+  font-size: 2.25rem;
   display: inline-block;
   outline: none;
   align-self: center;
@@ -25,20 +33,56 @@ input[type='range'] {
 }
 
 .album-art {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
+
 }
 
 .album-info {
-  text-align: center
+  text-align: center;
+  width: 100%;
+  padding: 0 0;
+  margin: 0 0;
 }
 
 .audio-provider-logo {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   padding: 15px;
+}
+
+.clock {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: start;
+  height: fit-content;
+  width: available;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.seeker {
+  align-content: end;
+  align-self: end;
+  text-align: end;
+  height: fit-content;
+  width: available;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.end-column {
+  //display: flex-;
+  flex-direction: column;
+  text-align: end;
+
+
+}
+
+.end-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 
