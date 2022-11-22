@@ -1,3 +1,4 @@
-import Clock from "./clock";
+import TopBar from "./TopBar";
+import MainControls from "../common/MainControls";
 
-export { Clock };
+export { TopBar, MainControls };

@@ -1,6 +1,4 @@
 import React from "react";
-import { Col } from "react-bootstrap";
-import { render } from "react-dom";
 
 type AlbumArtProps = {
   imageUrl: string;
@@ -9,9 +7,7 @@ type AlbumArtProps = {
 const AlbumArt = ({ imageUrl }: AlbumArtProps) => {
   return (
     <>
-      <Col className="align-self-center">
-        <img className="album-art" src={imageUrl} alt="album art" />
-      </Col>
+      <img src={imageUrl} alt="album art" />
     </>
   );
 };
