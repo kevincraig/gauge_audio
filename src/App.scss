@@ -42,12 +42,15 @@ input[type='range']::-webkit-slider-thumb {
 
 .album-art {
   object-fit: fill;
-  align-self: center;
   width: fit-content;
   height: fit-content;
   padding: 0 0 0 10px;
-
-
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
 .album-info {
@@ -87,15 +90,21 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .center-column {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   align-self: center;
+  //align-items: center;
+  //justify-content: center;
+  //height: available;
+  //width: available;
+  //padding: 0 0;
+  //margin: 0 0;
+}
+
+.main-content {
+  display: flex;
   align-items: center;
-  justify-content: center;
   height: available;
-  width: 100%;
-  padding: 0 0;
-  margin: 0 0;
 }
 
 .end-column {
@@ -104,7 +113,6 @@ input[type='range']::-webkit-slider-thumb {
   align-self: center;
   padding: 0 0 0 5px;
   margin: 0 0;
-
 
 }
 
@@ -126,4 +134,6 @@ input[type='range']::-webkit-slider-thumb {
   padding: 10px 10px;
 }
 
-
+.my-dropdown-toggle::after {
+  content: none;
+}

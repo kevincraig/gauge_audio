@@ -51,6 +51,7 @@ function TopBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <NavDropdown
             align={{ sm: "start" }}
+            drop={"start"}
             className={"me-3"}
             title={
               <span>
@@ -59,12 +60,8 @@ function TopBar() {
             }
             id="navbarScrollingDropdown"
           >
-            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action5">
-              Something else here
-            </NavDropdown.Item>
+            <NavDropdown.Item href="/Player">Spotify</NavDropdown.Item>
+            <NavDropdown.Item href="/Player">Tidal</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
       </Navbar>

@@ -9,7 +9,7 @@ type MainControlsProps = {
 const MainControls = ({ className }: MainControlsProps) => {
   return (
     <Col className={className}>
-      <Button type="button" variant="text" className="action-icon">
+      <Button type="button" variant="text" className="action-icon" href={"/"}>
         <House />
       </Button>
     </Col>
