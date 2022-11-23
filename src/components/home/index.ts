@@ -1,3 +1,4 @@
 import Home from "./Home";
+import MenuCard from "./MenuCard";
 
-export { Home };
+export { Home, MenuCard };

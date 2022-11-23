@@ -1,9 +1,12 @@
+@font-face {
+  font-family: 'Gruppo';
+  src: url('./assets/fonts/Gruppo-Regular.ttf') format('truetype');
+}
+
 body, html {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(40, 40, 40, 1) 100%);
   color: white;
-  padding: 0 0;
-  margin: 0 0;
   font-family: 'Roboto', sans-serif;
 
 }
@@ -39,18 +42,9 @@ input[type='range']::-webkit-slider-thumb {
   margin: 0 0;
 }
 
-
 .album-art {
-  object-fit: fill;
-  width: fit-content;
-  height: fit-content;
-  padding: 0 0 0 10px;
-  justify-items: center;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-  align-content: center;
-  align-self: center;
+  box-shadow: 7px 7px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .album-info {
@@ -62,78 +56,57 @@ input[type='range']::-webkit-slider-thumb {
 
 .audio-provider-logo {
   object-fit: cover;
-  padding: 15px;
-}
+  padding: 25px;
 
-.top-bar {
-  display: flex;
-  //color: white;
-  //font-size: 1.5rem;
-  //font-weight: normal;
-  align-items: start;
-  height: fit-content;
-  width: available;
-  margin: 0 0;
-  padding: 0 0;
-}
-
-.seeker {
-  display: flex;
-  align-content: end;
-  align-self: end;
-  justify-content: center;
-  text-align: justify;
-  height: fit-content;
-  width: available;
-  padding: 0 0;
-  margin: 0 0;
 }
 
 .center-column {
-  //display: flex;
-  //flex-direction: column;
+  display: flex;
   align-self: center;
-  //align-items: center;
-  //justify-content: center;
-  //height: available;
-  //width: available;
-  //padding: 0 0;
-  //margin: 0 0;
 }
 
-.main-content {
-  display: flex;
-  align-items: center;
-  height: available;
-}
-
-.end-column {
-  display: flex;
+.nav-bar {
+  position: sticky;
   height: fit-content;
-  align-self: center;
-  padding: 0 0 0 5px;
-  margin: 0 0;
-
+  padding-left: 10px;
 }
 
-.end-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.gruppo {
+  font-family: 'Gruppo';
+  font-size: 1.5em;
+}
+
+.menu-card {
+  background-color: rgba(0, 146, 255, 1);
+
+  border-radius: 10px;
+  align-content: center;
   justify-content: center;
+  width: 5em;
+  height: 5.5em;
+  padding: 15px;
+  margin: 10px;
+}
+
+
+.menu-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
   width: 100%;
 }
 
-.main-controls {
-  align-items: center;
-  padding: 0 0;
-  margin: 0 0;
+.menu-wrap:before {
+  display: block;
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/ga-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.025;
 }
 
-.service-source {
-  padding: 10px 10px;
-}
-
-.my-dropdown-toggle::after {
-  content: none;
-}

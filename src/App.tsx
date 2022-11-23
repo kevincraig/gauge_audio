@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Player, PlayerControls } from "./components/player";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row } from "react-bootstrap";
-import { TopBar, MainControls } from "./components/common";
+import { BottomBar, TopBar } from "./components/common";
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home/Home";
@@ -20,10 +20,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Row className={"min-vh-100 w-available bg-warning"}>
+        <Row className={"min-vh-100"}>
           <TopBar />
           <Row>
-            <Col className={"main-content col-11 bg-danger"}>
+            <Col className={"col-11 d-flex"}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route
@@ -40,13 +40,15 @@ function App() {
                 />
               </Routes>
             </Col>
-            <Col className={"end-column col-sm-1"}>
+            <Col className={"col-sm-1"}>
               <Col>
-                <MainControls className={"main-controls"} />
                 <PlayerControls />
               </Col>
             </Col>
           </Row>
+          <div className={"position-"}>
+            <BottomBar />
+          </div>
         </Row>
       </BrowserRouter>
     </div>

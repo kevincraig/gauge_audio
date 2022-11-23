@@ -1,7 +1,8 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import TidalLogo from "./../../assets/images/tidal-wide-white-rgb.png";
 import SpotifyLogo from "./../../assets/images/Spotify_Logo_RGB_White.png";
+import WifiUtils from "../common/wifi_utils";
 
 type AudioProviderProps = {
   provider: string;
@@ -12,13 +13,14 @@ const AudioProvider = ({ provider }: AudioProviderProps) => {
   const height = provider === "tidal" ? "20px" : "30px";
 
   return (
-    <img
-      src={logo}
-      alt="logo"
-      height={height}
-      width="available"
-      className={"p-1"}
-    />
+    <Row className={"pb-2"}>
+      <Col className={"col-11"}>
+        <img src={logo} alt="logo" height={height} width="available" />
+      </Col>
+      {/*<Col className={"col-1"}>*/}
+      {/*  <WifiUtils />*/}
+      {/*</Col>*/}
+    </Row>
   );
 };
 

@@ -1,4 +1,4 @@
 import TopBar from "./TopBar";
-import MainControls from "../common/MainControls";
+import BottomBar from "./BottomBar";
 
-export { TopBar, MainControls };
+export { TopBar, BottomBar };

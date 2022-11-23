@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Row,
-  Col,
-  Button,
-  Container,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavDropdown,
-} from "react-bootstrap";
+import { Navbar, NavDropdown } from "react-bootstrap";
 import { Grid3x3GapFill } from "react-bootstrap-icons";
 import logo from "../../assets/images/ga-logo.svg";
 
@@ -33,26 +24,21 @@ function TopBar() {
 
   return (
     <>
-      <Navbar
-        bg={"dark"}
-        variant={"dark"}
-        expand="sm"
-        fixed={"top"}
-        className={"m-0 p-0"}
-      >
-        <Navbar.Brand href="#home" className={"ms-2 me-2"}>
-          <img src={logo} width="30" height="30" alt={"Gauge Audio"} />
+      <Navbar bg={"dark"} variant={"dark"} expand="sm" className={"nav-bar"}>
+        <Navbar.Brand href="#home" className={"ms-2 me-3"}>
+          <img src={logo} width="35" height="35" alt={"Gauge Audio"} />
         </Navbar.Brand>
-        <Navbar.Brand className={"w-100"} style={{ fontSize: "1.0em" }}>
-          Gauge Audio
-        </Navbar.Brand>
+        <Navbar.Brand className={"w-100 gruppo"}>Gauge Audio</Navbar.Brand>
         <Navbar.Brand>{time}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/*<Navbar.Toggle*/}
+        {/*  className={"pe-sm-2 pe-lg-4"}*/}
+        {/*  aria-controls="basic-navbar-nav"*/}
+        {/*/>*/}
         <Navbar.Collapse id="basic-navbar-nav">
           <NavDropdown
             align={{ sm: "start" }}
             drop={"start"}
-            className={"me-3"}
+            className={"me-4"}
             title={
               <span>
                 <Grid3x3GapFill />

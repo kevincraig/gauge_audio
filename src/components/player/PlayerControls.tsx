@@ -6,6 +6,7 @@ import {
   SkipForwardBtn,
   PauseBtnFill,
   PlayBtnFill,
+  House,
 } from "react-bootstrap-icons";
 
 function PlayerControls() {
@@ -15,6 +16,10 @@ function PlayerControls() {
 
   return (
     <Col>
+      <Button type="button" variant="text" className="action-icon" href={"/"}>
+        <House />
+      </Button>
+
       <Button
         type="button"
         variant="text"
