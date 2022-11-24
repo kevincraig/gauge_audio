@@ -1,4 +1,25 @@
-![Gauge Audio])(https://github.com/kevincraig/gauge_audio/blob/7f4dfe171372bdc43d7290e88b8f8d773fe55384/docs/ga-logo.svg)
+<div style="text-align: center"> 
+<img src="docs/ga-logo.svg" width="200" alt="Gauge Audio" > 
+<p style="color: white; font-size: 42px">Gauge Audio</p>
+</div>
+
+# Purpose
+
+Gauge Audio is an Open Source web application that allows users to build a DIY Streaming Player. The player will be
+raspberry pi
+based initially built specifically for the Official Raspberry Pi 7" Screen. This is also an exercise to familiarize
+myself with both ReactJS and NodeJS.
+
+---
+
+## Early Development Screenshots
+
+![7" Screen Player](docs/7-inch-pi-screen-player.png)
+
+![7" Screen Menu](docs/7-inch-pi-screen-menu.png)
+
+
+---
 
 # Getting Started with Create React App
 

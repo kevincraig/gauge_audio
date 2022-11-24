@@ -68,7 +68,16 @@ input[type='range']::-webkit-slider-thumb {
 .nav-bar {
   position: sticky;
   height: fit-content;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.menu-icon {
+  font-size: 30px;
+}
+
+.menu-icon::after {
+  content: "";
 }
 
 .gruppo {
@@ -78,7 +87,6 @@ input[type='range']::-webkit-slider-thumb {
 
 .menu-card {
   background-color: rgba(0, 146, 255, 1);
-
   border-radius: 10px;
   align-content: center;
   justify-content: center;

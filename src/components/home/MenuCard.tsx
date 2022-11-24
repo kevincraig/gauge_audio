@@ -4,17 +4,24 @@ import { Card, CardGroup, Col } from "react-bootstrap";
 type MenuCardProps = {
   imageUrl: string;
   title?: string;
+  route?: string;
 };
 
-const MenuCard = ({ imageUrl, title }: PropsWithChildren<MenuCardProps>) => {
+const MenuCard = ({
+  imageUrl,
+  title,
+  route,
+}: PropsWithChildren<MenuCardProps>) => {
   return (
     <CardGroup>
-      <Col className={"align-self-center justify-self-center text-center"}>
-        <Card className={"menu-card"}>
-          <>
-            <Card.Img src={imageUrl} alt="Card image" />
-          </>
-        </Card>
+      <Col className={"align-self-center text-center p-3"}>
+        <a href={route}>
+          <Card className={"menu-card"}>
+            <>
+              <Card.Img src={imageUrl} alt="Card image" />
+            </>
+          </Card>
+        </a>
         <span>{title}</span>
       </Col>
     </CardGroup>

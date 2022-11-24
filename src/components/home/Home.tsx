@@ -9,7 +9,7 @@ import Playing from "./../../assets/images/play-solid.svg";
 const Home = () => {
   return (
     <div className={"menu-wrap "}>
-      <MenuCard imageUrl={SpotifyLogo} title={"Spotify"} />
+      <MenuCard imageUrl={SpotifyLogo} title={"Spotify"} route={"/player"} />
       <MenuCard imageUrl={TidalLogo} title={"Tidal"} />
       <MenuCard imageUrl={Settings} title={"Settings"} />
       <MenuCard imageUrl={Playing} title={"Now Playing"} />
