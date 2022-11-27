@@ -15,7 +15,7 @@ function PlayerControls() {
   let playing = isPlaying.toString();
 
   return (
-    <Col>
+    <Col className={"player-controls"}>
       <Button type="button" variant="text" className="action-icon" href={"/"}>
         <House />
       </Button>

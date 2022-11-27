@@ -24,7 +24,7 @@ function TopBar() {
 
   return (
     <>
-      <Navbar bg={"dark"} variant={"dark"} expand="sm" className={"nav-bar"}>
+      <Navbar bg={"dark"} variant={"dark"} className={"nav-bar"}>
         <Navbar.Brand href="#home" className={"ms-2 me-3"}>
           <img src={logo} width="35" height="35" alt={"Gauge Audio"} />
         </Navbar.Brand>

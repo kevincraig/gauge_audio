@@ -13,13 +13,10 @@ const AudioProvider = ({ provider }: AudioProviderProps) => {
   const height = provider === "tidal" ? "20px" : "30px";
 
   return (
-    <Row className={"pb-2"}>
-      <Col className={"col-11"}>
+    <Row className={"pb-2 pt-2 text-start"}>
+      <Col>
         <img src={logo} alt="logo" height={height} width="available" />
       </Col>
-      {/*<Col className={"col-1"}>*/}
-      {/*  <WifiUtils />*/}
-      {/*</Col>*/}
     </Row>
   );
 };

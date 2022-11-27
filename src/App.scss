@@ -4,10 +4,10 @@
 }
 
 body, html {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(40, 40, 40, 1) 100%);
+  background: rgb(20, 20, 20);
   color: white;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 
 }
 
@@ -23,6 +23,15 @@ input[type='range']::-webkit-slider-thumb {
   background: aqua;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0 10px;
 }
 
 .action-icon {
@@ -62,14 +71,45 @@ input[type='range']::-webkit-slider-thumb {
 
 .center-column {
   display: flex;
+  flex-direction: column;
   align-self: center;
 }
 
 .nav-bar {
   position: sticky;
-  height: fit-content;
+  top: 0;
+  z-index: 100;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.play-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+
+}
+
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0;
+  margin-right: 15px;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0;
 }
 
 .menu-icon {
@@ -102,8 +142,6 @@ input[type='range']::-webkit-slider-thumb {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  height: 100%;
-  width: 100%;
 }
 
 .menu-wrap:before {
@@ -112,9 +150,10 @@ input[type='range']::-webkit-slider-thumb {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("./assets/images/ga-logo.svg");
+
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.025;
 }
+
 

@@ -9,23 +9,24 @@ type SeekBarProps = {
 
 const SeekBar = ({ currentTime, duration }: SeekBarProps) => {
   return (
-    <Row>
-      <Col className="col-sm-1">
-        <p>0:00</p>
+    <Row className={"me-auto"}>
+      <Col className="col-1">
+        <span>0:00</span>
       </Col>
-      <Col className="col-10">
-        <input
-          className={"w-100"}
-          type={"range"}
-          value={currentTime}
-          step={1}
-          min={0}
-          max={duration}
-          // onChange={(e) => onSeek(parseInt(e.target.value))}
-        />
+      <Col className="col-sm-10">
+        <progress className={"w-100"} />
+        {/*<input*/}
+        {/*  className={"w-100"}*/}
+        {/*  type={"range"}*/}
+        {/*  value={currentTime}*/}
+        {/*  step={1}*/}
+        {/*  min={0}*/}
+        {/*  max={duration}*/}
+        {/*  // onChange={(e) => onSeek(parseInt(e.target.value))}*/}
+        {/*/>*/}
       </Col>
-      <Col className="col-sm-1">
-        <p>0:00</p>
+      <Col className="col-1">
+        <span>0:00</span>
       </Col>
     </Row>
   );

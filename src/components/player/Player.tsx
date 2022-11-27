@@ -10,30 +10,28 @@ type PlayerProps = {
   provider: string;
 };
 
-const Player = ({
+function Player({
   trackName,
   albumName,
   artistName,
   albumArtUrl,
   provider,
-}: PlayerProps) => {
+}: PlayerProps) {
   return (
-    <Container>
-      <Row>
-        <Col className={"col-md-5 col-lg-4"}>
-          <AlbumArt imageUrl="https://picsum.photos/250" />
-        </Col>
-        <Col className={"center-column"}>
-          <AlbumInfo
-            className={"album-info"}
-            albumName="Album Name"
-            artistName="Artist Name"
-            trackName="Track Name"
-          />
-        </Col>
-      </Row>
+    <Container className={"player-container"}>
+      <Col className={"col-md-5 col-lg-4"}>
+        <AlbumArt imageUrl="https://picsum.photos/250" />
+      </Col>
+      <Col className={"center-column"}>
+        <AlbumInfo
+          className={"album-info"}
+          albumName="Album Name"
+          artistName="Artist Name"
+          trackName="Track Name"
+        />
+      </Col>
     </Container>
   );
-};
+}
 
 export default Player;
