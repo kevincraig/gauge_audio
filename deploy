@@ -1,4 +1,0 @@
-yarn build
-scp -r ./build/* gauge@192.168.1.158:/var/www/html
-
-
