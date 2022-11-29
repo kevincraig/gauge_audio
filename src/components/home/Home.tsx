@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import MenuCard from "./MenuCard";
 import SpotifyLogo from "./../../assets/images/Spotify_Icon_RGB_White.png";
 import TidalLogo from "./../../assets/images/tidal-icon-white-rgb.png";
@@ -8,12 +7,14 @@ import Playing from "./../../assets/images/play-solid.svg";
 
 const Home = () => {
   return (
-    <div className={"menu-wrap "}>
-      <MenuCard imageUrl={Playing} title={"Now Playing"} />
-      <MenuCard imageUrl={SpotifyLogo} title={"Spotify"} route={"/player"} />
-      <MenuCard imageUrl={TidalLogo} title={"Tidal"} />
-      <MenuCard imageUrl={Settings} title={"Settings"} />
-    </div>
+    <>
+      <div className={"menu-wrap"}>
+        <MenuCard imageUrl={Playing} title={"Now Playing"} />
+        <MenuCard imageUrl={SpotifyLogo} title={"Spotify"} route={"spotify"} />
+        <MenuCard imageUrl={TidalLogo} title={"Tidal"} />
+        <MenuCard imageUrl={Settings} title={"Settings"} />
+      </div>
+    </>
   );
 };
 

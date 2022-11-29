@@ -5,4 +5,4 @@ import SeekBar from "./SeekBar";
 import AudioProvider from "./AudioProvider";
 import Player from "./Player";
 
-export { PlayerControls, AlbumInfo, AlbumArt, SeekBar, AudioProvider, Player };
+export { Player, PlayerControls, AlbumInfo, AlbumArt, SeekBar, AudioProvider };

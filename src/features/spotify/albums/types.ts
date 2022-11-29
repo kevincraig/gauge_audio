@@ -1,13 +1,3 @@
-export interface Player {
-  now_playing: string;
-  previous_track: string;
-  next_track: string;
-  is_playing: boolean;
-  album: Album;
-  artist: Artist;
-  track: Track;
-}
-
 export interface Album {
   album_type: string;
   total_tracks: number;
@@ -45,6 +35,7 @@ export interface Track {
   duration_ms: number;
   explicit: boolean;
   preview_url: string;
+
   // href: string;
   // items: {}[];
   // limit: number;

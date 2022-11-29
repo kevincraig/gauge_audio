@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from "react";
-import { Player, PlayerControls } from "./components/player";
-import { Col, Row } from "react-bootstrap";
-import { BottomBar, TopBar } from "./components/common";
+// import Routes from "routes/Routes";
 import "./App.scss";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { MainLayout } from "./layouts";
 import Home from "./components/home/Home";
+import type { RouteObject } from "react-router-dom";
+import { useRoutes, BrowserRouter as Router } from "react-router-dom";
+import SpotifyIndex, {
+  SpotifyAlbums,
+  SpotifyGenres,
+  SpotifyDashboard,
+} from "./pages/spotify";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  let routes: RouteObject[] = [
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        {
+          path: "/spotify",
+          element: <SpotifyDashboard />,
+          children: [
+            { index: true, element: <SpotifyIndex /> },
+            { path: "albums", element: <SpotifyAlbums /> },
+            { path: "genres", element: <SpotifyGenres /> },
+          ],
+        },
+      ],
+    },
+    { path: "*", element: <div>Not Found</div> },
+  ];
 
-  // if (loading) {
-  //     setLoading(false);
-  //     return <div>Loading...</div>;
-  // }
+  let element = useRoutes(routes);
 
-  return (
-    <div className="App">
-      <Row>
-        <TopBar />
-        <Row className={"main-content"}>
-          <Col className={"col-11"}></Col>
-          <Col className={"col-1"}>
-            <PlayerControls />
-          </Col>
-        </Row>
-      </Row>
-      <div className={"col-12 play-bar"}>
-        <BottomBar />
-      </div>
-    </div>
-  );
+  return <div className="App">{element}</div>;
 }
 
 export default App;

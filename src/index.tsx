@@ -1,23 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-
-// import * as serviceWorker from "./serviceWorker";
-import store from "./app/store";
+import { store } from "./app/store";
+import App from "./App";
 import "./index.css";
 
-function render() {
-  const App = require("./App").default;
-  ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container!);
+
+root.render(
+  <React.StrictMode>
     <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById("root")
-  );
-}
-
-render();
-
-if (process.env.NODE_ENV === "development" && module.hot) {
-  module.hot.accept("./App", render);
-}
+      <Router>
+        <App />
+      </Router>
+    </Provider>
+  </React.StrictMode>
+);

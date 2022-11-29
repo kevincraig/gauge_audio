@@ -156,4 +156,9 @@ input[type='range']::-webkit-slider-thumb {
   opacity: 0.025;
 }
 
+.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 

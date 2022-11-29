@@ -11,21 +11,23 @@ type MenuCardProps = {
 const MenuCard = ({
   imageUrl,
   title,
-  route,
+  route = "",
 }: PropsWithChildren<MenuCardProps>) => {
   return (
-    <CardGroup>
-      <Col className={"align-self-center text-center p-3"}>
-        <Link to="/player">
-          <Card className={"menu-card"}>
-            <>
-              <Card.Img src={imageUrl} alt="Card image" />
-            </>
-          </Card>
-        </Link>
-        <span>{title}</span>
-      </Col>
-    </CardGroup>
+    <>
+      <CardGroup>
+        <Col className={"align-self-center text-center p-3"}>
+          <nav>
+            <Link to={route.toString()}>
+              <Card className={"menu-card"}>
+                <Card.Img src={imageUrl} alt="Card image" />
+              </Card>
+            </Link>
+          </nav>
+          <span>{title}</span>
+        </Col>
+      </CardGroup>
+    </>
   );
 };
 

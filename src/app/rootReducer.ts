@@ -1,10 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
 import playerReducer from "../features/player/playerSlice";
+import albumReducer from "../features/spotify/albums/albumSlice";
 
 const rootReducer = combineReducers({
-  playerReducer,
+  player: playerReducer,
+  album: albumReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
-export default rootReducer;

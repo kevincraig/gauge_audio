@@ -7,6 +7,9 @@ type PlayerProps = {
   albumName: string;
   artistName: string;
   albumArtUrl: string;
+  isPlaying: boolean;
+  positionMs: number;
+  durationMs: number;
   provider: string;
 };
 
