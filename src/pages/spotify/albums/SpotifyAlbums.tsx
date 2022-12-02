@@ -26,22 +26,22 @@ const SpotifyAlbums = () => {
 
   return (
     <>
-      <Container>
+      <Container className={"vh-100"}>
         <h6 className={"pb-0 mb-0"}>Albums</h6>
-        <ListGroup horizontal className={"overflow-scroll pb-1"}>
-          <ListGroup.Item style={{ backgroundColor: "#101010" }}>
+        <ListGroup horizontal className={"listgroup overflow-scroll pb-1"}>
+          <ListGroup.Item className={"no-background no-border"}>
             <AlbumCard />
           </ListGroup.Item>
-          <ListGroup.Item style={{ backgroundColor: "#101010" }}>
+          <ListGroup.Item className={"no-background no-border"}>
             <AlbumCard />
           </ListGroup.Item>
-          <ListGroup.Item style={{ backgroundColor: "#101010" }}>
+          <ListGroup.Item className={"no-background no-border"}>
             <AlbumCard />
           </ListGroup.Item>
-          <ListGroup.Item style={{ backgroundColor: "#101010" }}>
+          <ListGroup.Item className={"no-background no-border"}>
             <AlbumCard />
           </ListGroup.Item>
-          <ListGroup.Item style={{ backgroundColor: "#101010" }}>
+          <ListGroup.Item className={"no-background no-border"}>
             <AlbumCard />
           </ListGroup.Item>
         </ListGroup>
@@ -55,8 +55,9 @@ const AlbumCard = () => {
     <Card
       style={{ width: "12rem", backgroundColor: "#272727", color: "white" }}
     >
-      <Card.Img variant="top" src={albums[0].images[0].url} />
-      <Card.Body className={"text-start overflow-hidden text-nowrap"}>
+      {/*"text-start overflow-hidden text-nowrap"*/}
+      <Card.Body className={"album-card"}>
+        <Card.Img variant="top" src={albums[0].images[0].url} />
         <Card.Text className={"overflow-ellipsis p-0 m-0 mb-1 fw-bold"}>
           {albums[0].name}
         </Card.Text>

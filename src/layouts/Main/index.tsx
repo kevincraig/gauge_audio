@@ -16,7 +16,7 @@ const MainLayout = () => {
           <Col className={"col-11"}>
             <Outlet />
           </Col>
-          <Col className={"col-1"}>
+          <Col className={"col-1 align-self-start"}>
             <PlayerControls />
           </Col>
         </Row>

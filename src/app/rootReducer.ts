@@ -3,7 +3,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import playerReducer from "../features/player/playerSlice";
 import albumReducer from "../features/spotify/albums/albumSlice";
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   player: playerReducer,
   album: albumReducer,
 });

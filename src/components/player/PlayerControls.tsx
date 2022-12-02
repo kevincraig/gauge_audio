@@ -1,6 +1,6 @@
 import { useToggle } from "../../hooks";
 import React from "react";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button, Row, Col, Container } from "react-bootstrap";
 import {
   SkipBackwardBtn,
   SkipForwardBtn,
@@ -15,7 +15,7 @@ function PlayerControls() {
   let playing = isPlaying.toString();
 
   return (
-    <Col className={"player-controls"}>
+    <Container className={"player-controls"}>
       <Button type="button" variant="text" className="action-icon" href={"/"}>
         <House />
       </Button>
@@ -45,7 +45,7 @@ function PlayerControls() {
       >
         <SkipForwardBtn />
       </Button>
-    </Col>
+    </Container>
   );
 }
 
